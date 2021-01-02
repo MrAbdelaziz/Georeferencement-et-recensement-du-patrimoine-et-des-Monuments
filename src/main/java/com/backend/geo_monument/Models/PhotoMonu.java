@@ -16,7 +16,6 @@ public class PhotoMonu extends Audit {
     @NotEmpty
     private String url;
 
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "monument_id")
     @JsonIgnore
     private Monument monument;
