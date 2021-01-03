@@ -36,7 +36,7 @@ public class GeoMonumentApplication implements CommandLineRunner {
                 new Region("marrakech")
         );
 
-        User user = new Recenseur("abdellah",
+       User user = new Recenseur("abdellah",
                         "boli_dev",
                         "aa@gmail.com",
                         "06666666",
