@@ -2,7 +2,10 @@ package com.backend.geo_monument.Models;
 
 import com.backend.geo_monument.Utils.Audit;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 @Entity
 @Table(name = "evenements")
@@ -18,7 +21,8 @@ public class Evenement extends Audit {
     @ManyToOne
     @JoinColumn(name="id_type", nullable=false)
     private TypeEvenement typeEvenement;
-    @ManyToMany
+    @OneToMany(mappedBy = "evenement", fetch = FetchType.LAZY)
+    private List<Periode> periodes;
 
     public Evenement() {
     }

@@ -2,6 +2,8 @@ package com.backend.geo_monument.Models;
 
 import com.backend.geo_monument.Utils.Audit;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Date;
 
 @Entity

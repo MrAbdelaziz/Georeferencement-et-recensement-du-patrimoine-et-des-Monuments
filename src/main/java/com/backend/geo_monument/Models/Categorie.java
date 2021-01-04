@@ -2,6 +2,8 @@ package com.backend.geo_monument.Models;
 
 import com.backend.geo_monument.Utils.Audit;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,8 +15,7 @@ public class Categorie extends Audit {
     private Long id;
     @NotEmpty
     private String titre;
-    @OneToMany
-    @JoinColumn(mappedBy="evenement")
+    @OneToMany(mappedBy="evenement")
     private Set<Evenement> evenement = new HashSet<>();
 
     public Categorie() {

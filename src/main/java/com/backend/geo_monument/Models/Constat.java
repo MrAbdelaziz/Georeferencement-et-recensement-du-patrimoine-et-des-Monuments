@@ -1,7 +1,8 @@
 package com.backend.geo_monument.Models;
 
 import com.backend.geo_monument.Utils.Audit;
-
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,8 +22,7 @@ public class Constat extends Audit {
     @NotEmpty
     private String status_constat;
 
-    @OneToMany
-    @JoinColumn(mappedBy="photo")
+    @OneToMany(mappedBy="photo")
     private Set<PhotoConstat> photoConstat = new HashSet<>();
     @ManyToOne
     @JoinColumn(name="id_monument", nullable=false)
