@@ -1,0 +1,241 @@
+<!-- /HEADER -->
+
+<!--&lt;!&ndash; Price Slider Stylesheets &ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/vendor/nouislider/nouislider.css">-->
+<!--&lt;!&ndash; Google fonts - Playfair Display&ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700">-->
+<!--&lt;!&ndash; Google fonts - Poppins&ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700">-->
+<!--&lt;!&ndash; swiper&ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">-->
+<!--&lt;!&ndash; Magnigic Popup&ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/vendor/magnific-popup/magnific-popup.css">-->
+<!--&lt;!&ndash; theme stylesheet&ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/css/style.default.e1630ae4.css" id="theme-stylesheet">-->
+<!--&lt;!&ndash; Custom stylesheet - for your changes&ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/css/custom.0a822280.css">-->
+<!--&lt;!&ndash; Favicon&ndash;&gt;-->
+<!--<link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/favicon.png">-->
+
+
+<section class="hero-home">
+<!--  <div class="swiper-container hero-slider swiper-container-fade swiper-container-horizontal">
+    <div class="swiper-wrapper dark-overlay" style="transition-duration: 0ms;">
+      <div class="swiper-slide" style="background-image: url(&=&q); width: 1903px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"></div>
+      <div class="swiper-slide" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/photo-1519974719765-e6559eac2575.jpg&quot;); width: 1903px; opacity: 1; transform: translate3d(-1903px, 0px, 0px); transition-duration: 0ms;"></div>
+      <div class="swiper-slide swiper-slide-prev" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/photo-1490578474895-699cd4e2cf59.jpg&quot;); width: 1903px; opacity: 1; transform: translate3d(-3806px, 0px, 0px); transition-duration: 0ms;"></div>
+      <div class="swiper-slide swiper-slide-active" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/photo-1534850336045-c6c6d287f89e.jpg&quot;); width: 1903px; opacity: 1; transform: translate3d(-5709px, 0px, 0px); transition-duration: 0ms;"></div>
+    </div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+  </div>-->
+
+<!--  <swiper [autoplay]="true" [slidesPerView]="3" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" [navigation]="true" [pagination]="{ clickable: true }" [scrollbar]="{ draggable: true }">
+    <ng-template swiperSlide>
+      <div style="background-image: url(assets/img/slide1.jpg); width: 1903px; opacity: 1; transform: translate3d(-1903px, 0px, 0px); transition-duration: 0ms;"></div>
+    </ng-template>
+
+
+
+  </swiper>-->
+
+
+  <swiper [autoplay]="false" [slidesPerView]="1"  style="position: absolute" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" [navigation]="false">
+      <ng-template swiperSlide>
+        <img src="assets/img/slide1.jpg" >
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <img src="assets/img/slide1.jpg" >
+      </ng-template>
+    *
+      <ng-template swiperSlide>
+        <img src="assets/img/slide1.jpg" >
+      </ng-template>
+  </swiper>
+
+
+<div class="container py-6 py-md-7 text-white z-index-20">
+    <div class="row">
+      <div class="col-xl-10">
+        <div class="text-center text-lg-left">
+          <p class="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">The best holiday experience</p>
+          <h1 class="display-3 font-weight-bold text-shadow">Stay like a local</h1>
+        </div>
+        <div class="search-bar mt-5 p-3 p-lg-1 pl-lg-4">
+          <form action="#">
+            <div class="row">
+              <div class="col-lg-4 d-flex align-items-center form-group">
+                <input class="form-control border-0 shadow-0" type="text" name="search" placeholder="What are you searching for?">
+              </div>
+              <div class="col-lg-3 d-flex align-items-center form-group">
+                <div class="input-label-absolute input-label-absolute-right w-100">
+                  <label class="label-absolute" for="location"><i class="fa fa-crosshairs"></i><span class="sr-only">City</span></label>
+                  <input class="form-control border-0 shadow-0" type="text" name="location" placeholder="Location" id="location">
+                </div>
+              </div>
+              <div class="col-lg-3 d-flex align-items-center form-group no-divider">
+                <div class="dropdown bootstrap-select"><select class="selectpicker" title="Categories" data-style="btn-form-control" tabindex="-98"><option class="bs-title-option" value=""></option>
+                  <option value="small">Restaurants</option>
+                  <option value="medium">Hotels</option>
+                  <option value="large">Cafes</option>
+                  <option value="x-large">Garages</option>
+                </select><button type="button" class="btn dropdown-toggle btn-form-control bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Categories"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Categories</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+              </div>
+              <div class="col-lg-2">
+                <button class="btn btn-primary btn-block rounded-xl h-100" type="submit">Search </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- kawtar -->
+<section class="py-6">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-8">
+        <p class="subtitle text-primary">Stay and eat like a local</p>
+        <h2>Our guides</h2>
+      </div>
+      <div class="col-md-4 d-lg-flex align-items-center justify-content-end"><a class="text-muted text-sm" href="category.html">
+        See all guides<i class="fas fa-angle-double-right ml-2"></i></a></div>
+    </div>
+    <swiper [slidesPerView]="3" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" [navigation]="true" [pagination]="{ clickable: true }" [scrollbar]="{ draggable: true }">
+      <ng-template swiperSlide>
+        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="category.html"></a><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg" alt="Card image">
+          <div class="card-body overlay-content">
+            <h6 class="card-title text-shadow text-uppercase">New York</h6>
+            <p class="card-text text-sm">The big apple</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="category.html"></a><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg" alt="Card image">
+          <div class="card-body overlay-content">
+            <h6 class="card-title text-shadow text-uppercase">New York</h6>
+            <p class="card-text text-sm">The big apple</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="category.html"></a><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg" alt="Card image">
+          <div class="card-body overlay-content">
+            <h6 class="card-title text-shadow text-uppercase">New York</h6>
+            <p class="card-text text-sm">The big apple</p>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="category.html"></a><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg" alt="Card image">
+          <div class="card-body overlay-content">
+            <h6 class="card-title text-shadow text-uppercase">New York</h6>
+            <p class="card-text text-sm">The big apple</p>
+          </div>
+        </div>
+      </ng-template>
+
+    </swiper>
+
+  </div>
+</section>
+<!-- /kawtar -->
+
+<!--
+&lt;!&ndash; Divider Section&ndash;&gt;
+<section class="py-7 position-relative dark-overlay"><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/photo-1497436072909-60f360e1d4b1.jpg" alt="">
+  <div class="container">
+    <div class="overlay-content text-white py-lg-5">
+      <h3 class="display-3 font-weight-bold text-serif text-shadow mb-5">Ready for your next holidays?</h3><a class="btn btn-light" href="category-rooms.html">Get started</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-7">
+  <div class="container">
+    <div class="text-center">
+      <p class="subtitle text-primary">Testimonials</p>
+      <h2 class="mb-5">Our dear customers said about us</h2>
+    </div>
+    &lt;!&ndash; Slider main container&ndash;&gt;
+    <div class="swiper-container testimonials-slider testimonials">
+      &lt;!&ndash; Additional required wrapper&ndash;&gt;
+      <div class="swiper-wrapper pt-2 pb-5">
+        &lt;!&ndash; Slides&ndash;&gt;
+        <div class="swiper-slide px-3">
+          <div class="testimonial card rounded-lg shadow border-0">
+            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
+            <div class="text">
+              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-3">
+          <div class="testimonial card rounded-lg shadow border-0">
+            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
+            <div class="text">
+              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-3">
+          <div class="testimonial card rounded-lg shadow border-0">
+            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
+            <div class="text">
+              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-3">
+          <div class="testimonial card rounded-lg shadow border-0">
+            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
+            <div class="text">
+              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-3">
+          <div class="testimonial card rounded-lg shadow border-0">
+            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
+            <div class="text">
+              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-3">
+          <div class="testimonial card rounded-lg shadow border-0">
+            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
+            <div class="text">
+              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination">     </div>
+    </div>
+  </div>
+</section>
+
+&lt;!&ndash; Instagram&ndash;&gt;
+
+&lt;!&ndash; Footer&ndash;&gt;
+-->
