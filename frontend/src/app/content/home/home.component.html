@@ -113,39 +113,17 @@
         See all guides<i class="fas fa-angle-double-right ml-2"></i></a></div>
     </div>
     <swiper [slidesPerView]="3" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" [navigation]="true" [pagination]="{ clickable: true }" [scrollbar]="{ draggable: true }">
-      <ng-template swiperSlide>
-        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="category.html"></a><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg" alt="Card image">
+
+
+      <ng-template swiperSlide *ngFor="let item of Section2Images ">
+        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="{{item.link}}"></a><img class="bg-image" src="{{item.src}}" alt="Card image">
           <div class="card-body overlay-content">
-            <h6 class="card-title text-shadow text-uppercase">New York</h6>
-            <p class="card-text text-sm">The big apple</p>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="category.html"></a><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg" alt="Card image">
-          <div class="card-body overlay-content">
-            <h6 class="card-title text-shadow text-uppercase">New York</h6>
-            <p class="card-text text-sm">The big apple</p>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="category.html"></a><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg" alt="Card image">
-          <div class="card-body overlay-content">
-            <h6 class="card-title text-shadow text-uppercase">New York</h6>
-            <p class="card-text text-sm">The big apple</p>
+            <h6 class="card-title text-shadow text-uppercase">{{item.title}}</h6>
+            <p class="card-text text-sm">{{item.description}}</p>
           </div>
         </div>
       </ng-template>
 
-      <ng-template swiperSlide>
-        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="category.html"></a><img class="bg-image" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg" alt="Card image">
-          <div class="card-body overlay-content">
-            <h6 class="card-title text-shadow text-uppercase">New York</h6>
-            <p class="card-text text-sm">The big apple</p>
-          </div>
-        </div>
-      </ng-template>
 
     </swiper>
 

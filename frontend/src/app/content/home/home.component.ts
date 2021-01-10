@@ -11,6 +11,8 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y , Autoplay]);
 interface Images{
   src: string;
   link: string;
+  title: string;
+  description: string;
 }
 
 @Component({
@@ -22,7 +24,11 @@ export class HomeComponent implements OnInit {
 
   Section2Images: Images[] = [];
 
-  constructor() { }
+  constructor() {
+    this.Section2Images.push({ src : 'https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg', link : 'https://google.com', title: "New York", description :"Américaa"});
+    this.Section2Images.push({ src : 'https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg', link : 'https://google.com', title: "Paris",description :"La ville des lumières"});
+    this.Section2Images.push({ src : 'https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg', link : 'https://google.com', title: "Rabat",description :"hay karima"});
+  }
 
   onSwiper(swiper): void {
     console.log(swiper);
@@ -33,9 +39,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.Section2Images.push({ src : 'static/...', link : '/paris/details'});
-    this.Section2Images.push({ src : 'static/...', link : '/paris/details'});
-    this.Section2Images.push({ src : 'static/...', link : '/paris/details'});
+
   }
 
 }
