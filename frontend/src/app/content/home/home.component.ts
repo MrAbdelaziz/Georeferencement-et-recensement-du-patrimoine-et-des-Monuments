@@ -22,13 +22,28 @@ interface Images{
 })
 export class HomeComponent implements OnInit {
 
+  Section1Images: string[];
   Section2Images: Images[] = [];
+  slider: string;
 
   constructor() {
-    this.Section2Images.push({ src : 'https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg', link : 'https://google.com', title: "New York", description :"Américaa"});
-    this.Section2Images.push({ src : 'https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg', link : 'https://google.com', title: "Paris",description :"La ville des lumières"});
-    this.Section2Images.push({ src : 'https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/new-york.jpg', link : 'https://google.com', title: "Rabat",description :"hay karima"});
+    this.Section2Images.push({ src : 'assets/img/new-york.jpg', link : 'https://google.com', title: 'New York', description : 'Américaa'});
+    this.Section2Images.push({ src : 'assets/img/new-york.jpg', link : 'https://google.com', title: 'Paris', description : 'La ville des lumières'});
+    this.Section2Images.push({ src : 'assets/img/new-york.jpg', link : 'https://google.com', title: 'Rabat', description : 'hay karima'});
+    this.Section2Images.push({ src : 'assets/img/new-york.jpg', link : 'https://google.com', title: 'New York', description : 'Américaa'});
+    this.Section2Images.push({ src : 'assets/img/new-york.jpg', link : 'https://google.com', title: 'Paris', description : 'La ville des lumières'});
+    this.Section2Images.push({ src : 'assets/img/new-york.jpg', link : 'https://google.com', title: 'Rabat', description : 'hay karima'});
+    this.Section2Images.push({ src : 'assets/img/new-york.jpg', link : 'https://google.com', title: 'New York', description : 'Américaa'});
+    this.Section2Images.push({ src : 'assets/img/new-york.jpg', link : 'https://google.com', title: 'New York', description : 'Américaa'});
+
+    this.Section1Images = ['/assets/img/slide1.jpg', '/assets/img/slide2.jpg', '/assets/img/slide3.jpeg'];
+
+    setInterval(() => {
+      this.slider = this.Section1Images[Math.floor(Math.random() * this.Section1Images.length)];
+    }, 3 * 1000);
+
   }
+
 
   onSwiper(swiper): void {
     console.log(swiper);

@@ -18,43 +18,9 @@
 <!--<link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/favicon.png">-->
 
 
-<section class="hero-home">
-<!--  <div class="swiper-container hero-slider swiper-container-fade swiper-container-horizontal">
-    <div class="swiper-wrapper dark-overlay" style="transition-duration: 0ms;">
-      <div class="swiper-slide" style="background-image: url(&=&q); width: 1903px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"></div>
-      <div class="swiper-slide" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/photo-1519974719765-e6559eac2575.jpg&quot;); width: 1903px; opacity: 1; transform: translate3d(-1903px, 0px, 0px); transition-duration: 0ms;"></div>
-      <div class="swiper-slide swiper-slide-prev" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/photo-1490578474895-699cd4e2cf59.jpg&quot;); width: 1903px; opacity: 1; transform: translate3d(-3806px, 0px, 0px); transition-duration: 0ms;"></div>
-      <div class="swiper-slide swiper-slide-active" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/1-5/img/photo/photo-1534850336045-c6c6d287f89e.jpg&quot;); width: 1903px; opacity: 1; transform: translate3d(-5709px, 0px, 0px); transition-duration: 0ms;"></div>
-    </div>
-    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-  </div>-->
+<section class="hero-home" style="background-image:url( {{slider}} );background-repeat: no-repeat;background-size: cover;background-position: center;">
 
-<!--  <swiper [autoplay]="true" [slidesPerView]="3" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" [navigation]="true" [pagination]="{ clickable: true }" [scrollbar]="{ draggable: true }">
-    <ng-template swiperSlide>
-      <div style="background-image: url(assets/img/slide1.jpg); width: 1903px; opacity: 1; transform: translate3d(-1903px, 0px, 0px); transition-duration: 0ms;"></div>
-    </ng-template>
-
-
-
-  </swiper>-->
-
-
-  <swiper [autoplay]="false" [slidesPerView]="1"  style="position: absolute" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" [navigation]="false">
-      <ng-template swiperSlide>
-        <img src="assets/img/slide1.jpg" >
-      </ng-template>
-
-      <ng-template swiperSlide>
-        <img src="assets/img/slide1.jpg" >
-      </ng-template>
-    *
-      <ng-template swiperSlide>
-        <img src="assets/img/slide1.jpg" >
-      </ng-template>
-  </swiper>
-
-
-<div class="container py-6 py-md-7 text-white z-index-20">
+  <div class="container py-6 py-md-7 text-white z-index-20">
     <div class="row">
       <div class="col-xl-10">
         <div class="text-center text-lg-left">
@@ -65,24 +31,43 @@
           <form action="#">
             <div class="row">
               <div class="col-lg-4 d-flex align-items-center form-group">
-                <input class="form-control border-0 shadow-0" type="text" name="search" placeholder="What are you searching for?">
+                <input class="form-control border-0 shadow-0" name="search" placeholder="What are you searching for?"
+                       type="text">
               </div>
               <div class="col-lg-3 d-flex align-items-center form-group">
                 <div class="input-label-absolute input-label-absolute-right w-100">
                   <label class="label-absolute" for="location"><i class="fa fa-crosshairs"></i><span class="sr-only">City</span></label>
-                  <input class="form-control border-0 shadow-0" type="text" name="location" placeholder="Location" id="location">
+                  <input class="form-control border-0 shadow-0" id="location" name="location" placeholder="Location"
+                         type="text">
                 </div>
               </div>
               <div class="col-lg-3 d-flex align-items-center form-group no-divider">
-                <div class="dropdown bootstrap-select"><select class="selectpicker" title="Categories" data-style="btn-form-control" tabindex="-98"><option class="bs-title-option" value=""></option>
+                <div class="dropdown bootstrap-select"><select class="selectpicker" data-style="btn-form-control"
+                                                               tabindex="-98" title="Categories">
+                  <option class="bs-title-option" value=""></option>
                   <option value="small">Restaurants</option>
                   <option value="medium">Hotels</option>
                   <option value="large">Cafes</option>
                   <option value="x-large">Garages</option>
-                </select><button type="button" class="btn dropdown-toggle btn-form-control bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Categories"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Categories</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                </select>
+                  <button aria-expanded="false" aria-haspopup="listbox"
+                          aria-owns="bs-select-1" class="btn dropdown-toggle btn-form-control bs-placeholder" data-toggle="dropdown" role="combobox"
+                          title="Categories" type="button">
+                    <div class="filter-option">
+                      <div class="filter-option-inner">
+                        <div class="filter-option-inner-inner">Categories</div>
+                      </div>
+                    </div>
+                  </button>
+                  <div class="dropdown-menu ">
+                    <div class="inner show" id="bs-select-1" role="listbox" tabindex="-1">
+                      <ul class="dropdown-menu inner show" role="presentation"></ul>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-lg-2">
-                <button class="btn btn-primary btn-block rounded-xl h-100" type="submit">Search </button>
+                <button class="btn btn-primary btn-block rounded-xl h-100" type="submit">Search</button>
               </div>
             </div>
           </form>
@@ -93,38 +78,33 @@
 </section>
 
 
-
-
-
-
-
-
-
-
 <!-- kawtar -->
 <section class="py-6">
   <div class="container">
+
     <div class="row mb-5">
       <div class="col-md-8">
-        <p class="subtitle text-primary">Stay and eat like a local</p>
-        <h2>Our guides</h2>
+        <p class="subtitle text-primary">Xxxxxxxxxxx</p>
+        <h2>Our xxxxx</h2>
       </div>
-      <div class="col-md-4 d-lg-flex align-items-center justify-content-end"><a class="text-muted text-sm" href="category.html">
-        See all guides<i class="fas fa-angle-double-right ml-2"></i></a></div>
+      <div class="col-md-4 d-lg-flex align-items-center justify-content-end">
+        <a class="text-muted text-sm" href="category.html">
+        See all xxxxx<i class="fas fa-angle-double-right ml-2"></i></a>
+      </div>
     </div>
-    <swiper [slidesPerView]="3" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" [navigation]="true" [pagination]="{ clickable: true }" [scrollbar]="{ draggable: true }">
 
-
-      <ng-template swiperSlide *ngFor="let item of Section2Images ">
-        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="{{item.link}}"></a><img class="bg-image" src="{{item.src}}" alt="Card image">
+    <swiper (slideChange)="onSlideChange()" (swiper)="onSwiper($event)" [navigation]="false"
+           [autoplay]="true" [slidesPerView]="4" [spaceBetween]="50">
+      <ng-template *ngFor="let item of Section2Images " swiperSlide>
+        <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0">
+          <a class="tile-link" href="{{item.link}}"></a>
+          <img alt="Card image" class="bg-image" src="{{item.src}}">
           <div class="card-body overlay-content">
             <h6 class="card-title text-shadow text-uppercase">{{item.title}}</h6>
             <p class="card-text text-sm">{{item.description}}</p>
           </div>
         </div>
       </ng-template>
-
-
     </swiper>
 
   </div>
