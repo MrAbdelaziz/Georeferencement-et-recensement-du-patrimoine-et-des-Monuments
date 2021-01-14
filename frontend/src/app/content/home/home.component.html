@@ -1,31 +1,13 @@
 <!-- /HEADER -->
 
-<!--&lt;!&ndash; Price Slider Stylesheets &ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/vendor/nouislider/nouislider.css">-->
-<!--&lt;!&ndash; Google fonts - Playfair Display&ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700">-->
-<!--&lt;!&ndash; Google fonts - Poppins&ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700">-->
-<!--&lt;!&ndash; swiper&ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">-->
-<!--&lt;!&ndash; Magnigic Popup&ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/vendor/magnific-popup/magnific-popup.css">-->
-<!--&lt;!&ndash; theme stylesheet&ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/css/style.default.e1630ae4.css" id="theme-stylesheet">-->
-<!--&lt;!&ndash; Custom stylesheet - for your changes&ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/css/custom.0a822280.css">-->
-<!--&lt;!&ndash; Favicon&ndash;&gt;-->
-<!--<link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/favicon.png">-->
-
-
 <section class="hero-home" style="background-image:url( {{slider}} );background-repeat: no-repeat;background-size: cover;background-position: center;">
 
   <div class="container py-6 py-md-7 text-white z-index-20">
     <div class="row">
       <div class="col-xl-10">
         <div class="text-center text-lg-left">
-          <p class="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">The best holiday experience</p>
-          <h1 class="display-3 font-weight-bold text-shadow">Stay like a local</h1>
+          <p class="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">Xxxxxxxxxxxxxxx>
+          <h1 class="display-3 font-weight-bold text-shadow">XXXXXXXXXXXXXXX</h1>
         </div>
         <div class="search-bar mt-5 p-3 p-lg-1 pl-lg-4">
           <form action="#">
@@ -124,77 +106,28 @@
 <section class="py-7">
   <div class="container">
     <div class="text-center">
-      <p class="subtitle text-primary">Testimonials</p>
-      <h2 class="mb-5">Our dear customers said about us</h2>
+      <p class="subtitle text-primary">xxxxxxxx</p>
+      <h2 class="mb-5">Our xxxxxxxxxxxx</h2>
     </div>
     <!-- Slider main container-->
-    <div class="swiper-container testimonials-slider testimonials">
-      <!-- Additional required wrapper-->
-      <div class="swiper-wrapper pt-2 pb-5">
-        <!-- Slides-->
-        <div class="swiper-slide px-3">
-          <div class="testimonial card rounded-lg shadow border-0">
-            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
-            <div class="text">
-              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
-            </div>
+
+    <swiper (slideChange)="onSlideChange()" (swiper)="onSwiper($event)" [navigation]="false"
+            [autoplay]="true" [slidesPerView]="1" [spaceBetween]="10">
+
+      <ng-template  swiperSlide>
+        <div class="testimonial card rounded-lg shadow border-0">
+          <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
+          <div class="text">
+            <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+            <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
           </div>
         </div>
+      </ng-template>
 
-        <div class="swiper-slide px-3">
-          <div class="testimonial card rounded-lg shadow border-0">
-            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
-            <div class="text">
-              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
-            </div>
-          </div>
-        </div>
+    </swiper>
 
-        <div class="swiper-slide px-3">
-          <div class="testimonial card rounded-lg shadow border-0">
-            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
-            <div class="text">
-              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
-            </div>
-          </div>
-        </div>
 
-        <div class="swiper-slide px-3">
-          <div class="testimonial card rounded-lg shadow border-0">
-            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
-            <div class="text">
-              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
-            </div>
-          </div>
-        </div>
 
-        <div class="swiper-slide px-3">
-          <div class="testimonial card rounded-lg shadow border-0">
-            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
-            <div class="text">
-              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide px-3">
-          <div class="testimonial card rounded-lg shadow border-0">
-            <div class="testimonial-avatar"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/directory/1-5/img/avatar/avatar-3.jpg" alt="..."></div>
-            <div class="text">
-              <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-              <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong>Jessica Watson</strong>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="swiper-pagination">     </div>
-    </div>
   </div>
 </section>
 
