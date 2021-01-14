@@ -22,6 +22,7 @@ export class HeaderComponent implements OnInit {
     this.logo = 'assets/img/logo.svg';
     this.menu.push({ name : 'HOME', path : 'Home'});
     this.menu.push({ name : 'MAP', path : 'Map'});
+    this.menu.push({ name : 'DashBoard', path : 'dash'});
   }
 
   ngOnInit(): void {
