@@ -5,8 +5,8 @@ import {HttpClient} from "@angular/common/http";
 import {LoginService} from "./login.service";
 export interface Compte{
   id?: number;
-  login? :string;
-  privilege? : string;
+  user? :string;
+  role? : string;
   password?: string;
 }
 @Component({
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
 
   login() {
    this.isLoading = true;
-    const login$ = this.httpClient.post('',this.loginForm.value);
+    const login$ = this.httpClient.post('http://localhost:8080/api/auth/login',this.loginForm.value);
 
     login$.subscribe(
       (compte: Compte) => {
@@ -54,6 +54,8 @@ export class LoginComponent implements OnInit {
         this.error = error.error.message;
       }
     );
+
+    //console.log(this.loginForm.value);
   }
 
   checkLocalStorage() {
@@ -67,7 +69,7 @@ export class LoginComponent implements OnInit {
 
   private createForm() {
     this.loginForm = this.formBuilder.group({
-      login: ['', Validators.required],
+      username: ['', Validators.required],
       password: ['', Validators.required]
     });
   }

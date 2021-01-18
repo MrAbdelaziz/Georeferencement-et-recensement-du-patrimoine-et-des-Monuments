@@ -1,1 +1,77 @@
-<p>add-monument works!</p>
+<app-dash-header></app-dash-header>
+<section id="content">
+  <div class="row">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="wrap block-3 pad-2">
+          <br><br>
+          <h1 class="text-center"> Nouveau Monument</h1>
+          <br>
+
+          <form (ngSubmit)="newMonument()" [formGroup]="monumentForm">
+            <div class="form-group">
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">name</label>
+                  <input type="text" name="name" formControlName="name" class="form-control" id="name" placeholder="name">
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="typeMonu">Type</label>
+                  <select id="typeMonu" formControlName="typeMonu" placeholder="typeMonu" class="form-control">
+                    <option >Zaouia</option>
+                    <option >Mosquée</option>
+                    <option >Château</option>
+                    <option >Place publique</option>
+                    <option >église</option>
+                    <option >Kasbah</option>
+                    <option >Hôtel de ville</option>
+                    <option >Jardin</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="adresse">adresse</label>
+                  <input type="text" formControlName="adresse" name="adresse" class="form-control" id="adresse" placeholder="Type du monument">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="region">region</label>
+                  <input type="text" name="region" formControlName="region" class="form-control" id="region" placeholder="objectif">
+                </div>
+              </div>
+
+                <div class="form-group col-md-6">
+                  <label for="dateCreatetion">date Createtion</label>
+                  <input type="date" formControlName="dateCreatetion" name="dateCreatetion" class="form-control" id="dateCreatetion" placeholder="dateCreatetion">
+                </div>
+
+               <div class="form-row">
+
+              <div class="form-group col-md-6">
+                  <label for="altitude">latitude</label>
+                  <input type="number" formControlName="altitude" class="form-control" id="altitude" placeholder="altitude">
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="longitude">longitude</label>
+                  <input type="number" formControlName="longitude" class="form-control" id="longitude" placeholder="longitude">
+                </div>
+              </div>
+
+              <br>
+              <br>
+              <input type="submit" class="btn btn-dark btn-lg btn-block">
+              <br>
+              <p *ngIf="isPassed" style="color:green;">{{success}}</p>
+              <p *ngIf="!isPassed" style="color : red;">{{error}}</p>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-dash-footer></app-dash-footer>
