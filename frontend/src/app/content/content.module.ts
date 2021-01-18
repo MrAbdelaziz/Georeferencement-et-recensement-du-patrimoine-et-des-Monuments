@@ -6,11 +6,19 @@ import {ContentComponent} from './content.component';
 import {RouterModule} from '@angular/router';
 import {ContentRoutingModule} from './content-routing.module';
 import { SwiperModule } from 'swiper/angular';
+import {AppModule} from "../app.module";
+import {HeaderComponent} from "./header/header.component";
+import {FooterComponent} from "./footer/footer.component";
 
 
 
 @NgModule({
-  declarations: [HomeComponent, MapComponent, ContentComponent],
+  declarations: [
+    HomeComponent,
+    MapComponent,
+    ContentComponent,
+    HeaderComponent,
+    FooterComponent],
   exports: [
     ContentComponent
   ],
@@ -18,7 +26,8 @@ import { SwiperModule } from 'swiper/angular';
     CommonModule,
     RouterModule,
     ContentRoutingModule,
-    SwiperModule
+    SwiperModule,
+
   ]
 })
 export class ContentModule { }

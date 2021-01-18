@@ -4,7 +4,7 @@
     <div class="container-fluid">
 
       <div class="d-flex align-items-center">
-        <a class="navbar-brand py-1" href="index.html">
+        <a class="navbar-brand py-1" href="../../../index.html">
           <img [src]="logo" alt="Georeferencement">
         </a>
       </div>
@@ -14,7 +14,7 @@
         <ul class="navbar-nav ml-auto" >
 
               <li class="nav-item " *ngFor="let item of menu">
-                <a class="nav-link" routerLink="{{item.path}}">
+                <a class="nav-link" routerLink="/{{item.path}}">
                   {{item.name}}
                 </a>
               </li>

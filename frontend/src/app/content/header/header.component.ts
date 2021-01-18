@@ -23,6 +23,7 @@ export class HeaderComponent implements OnInit {
     this.menu.push({ name : 'HOME', path : 'Home'});
     this.menu.push({ name : 'MAP', path : 'Map'});
     this.menu.push({ name : 'DashBoard', path : 'dash'});
+    this.menu.push({ name : 'Login', path : 'login'});
   }
 
   ngOnInit(): void {
