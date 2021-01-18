@@ -33,19 +33,20 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('login');
   }
 
   ngOnDestroy() {}
 
   login() {
-    this.isLoading = true;
-    const login$ = this.httpClient.post('http://localhost:8080',this.loginForm.value);
+   this.isLoading = true;
+    const login$ = this.httpClient.post('',this.loginForm.value);
 
     login$.subscribe(
       (compte: Compte) => {
         this.user = compte;
         this.loginService.setUserLoggedIn(this.user);
-        this.router.navigate(['/home'], { replaceUrl: true });
+        this.router.navigate(['/dash/h'], { replaceUrl: true });
       },
       error => {
         this.isLoading = false;
