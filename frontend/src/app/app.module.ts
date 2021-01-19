@@ -9,6 +9,7 @@ import {PerfectScrollbarModule} from "ngx-perfect-scrollbar";
 import {DashboardModule} from "./dashboard/dashboard.module";
 import {LoginComponent} from "./login/login.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     DashboardModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   exports: [

@@ -9,6 +9,7 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -27,20 +28,17 @@ public class Monument extends Audit {
     private Long altitude;
     private Long longitude;
     private String dateValidation;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private CategoryMonu categoryMonu;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
     @JoinColumn(name = "type_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private TypeMonu typeMonu;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
     @JoinColumn(name = "region_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -49,6 +47,9 @@ public class Monument extends Audit {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "monument")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Set<PhotoMonu> photoMonus = new HashSet<>();
+
+    @OneToMany(mappedBy = "monument", fetch = FetchType.LAZY)
+    private List<Periode> periodes;
 
     public Monument() {
     }

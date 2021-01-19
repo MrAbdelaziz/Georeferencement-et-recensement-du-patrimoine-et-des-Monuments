@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
    // console.log(this.pas);
+    console.log(this.menu);
   }
 
 }

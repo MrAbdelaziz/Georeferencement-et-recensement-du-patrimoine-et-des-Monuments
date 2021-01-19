@@ -5,10 +5,10 @@
     <nav class="box-shadow">
       <div>
         <ul class="menu">
-          <li class="home-page"><a routerLink="/home"><span></span></a></li>
+          <li class="home-page"><a routerLink="/Home"><span></span></a></li>
           <li *ngIf="isAdminRegional"><a routerLink="">Monuments (liste des nouveaux monuments)</a></li>
           <li *ngIf="isAdminRegional"><a routerLink="">Constats (liste des nouveaux constats)</a></li>
-          <li *ngIf="isRecenseur" ><a routerLink="">Nouveau Monument</a></li>
+          <li><a routerLink="/add-monument">Nouveau Monument</a></li>
           <li *ngIf="isRecenseur" ><a routerLink="">Nouveau Constat</a></li>
           <li *ngIf="isRecenseur" ><a routerLink="">Nouvel événement ou Travail</a></li>
           <li *ngIf="isGestComptes"><a routerLink="">Nouvel utilisateur</a></li>

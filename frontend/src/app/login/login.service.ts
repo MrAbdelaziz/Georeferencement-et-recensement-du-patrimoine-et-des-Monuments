@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Compte} from "./login.component";
+import { Compte } from './login.component';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,7 @@ import {Compte} from "./login.component";
 export class LoginService {
 
   constructor() { }
+
   setUserLoggedIn(user: Compte) {
     localStorage.setItem('user', JSON.stringify(user));
     console.log('saved on localStorage');
