@@ -37,11 +37,11 @@ public class GeoMonumentApplication implements CommandLineRunner {
         );
 
        User user = new Recenseur("abdellah",
-                        "boli_dev",
+                        "recenseur",
                         "aa@gmail.com",
                         "06666666",
                         "marrakech",
-                        bcryptEncoder.encode("123546"),
+                        bcryptEncoder.encode("123456"),
                         StatusUser.APPROVED,
                         region
             );

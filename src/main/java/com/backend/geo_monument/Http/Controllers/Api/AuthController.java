@@ -1,6 +1,7 @@
 package com.backend.geo_monument.Http.Controllers.Api;
 
 import com.backend.geo_monument.Http.Reponses.AuthResponse;
+import com.backend.geo_monument.Http.Reponses.JwtResponse;
 import com.backend.geo_monument.Http.Requests.AuthRequest;
 import com.backend.geo_monument.Http.Requests.SignupRequest;
 import com.backend.geo_monument.Http.Validator.ConfirmPasswordValidator;
@@ -18,6 +19,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/auth")
@@ -54,8 +57,13 @@ public class AuthController {
         String token = jwtTokenUtil.generateToken(authentication);
 
         // * 5- RETURN THE TOKEN
-        return new ResponseEntity<AuthResponse>(new AuthResponse(token, true), HttpStatus.CREATED);
 
+        User user1 = (User) authentication.getPrincipal();
+
+        return ResponseEntity.ok(new JwtResponse(token,
+                user1.getId(),
+                user1.getUsername(),
+                user1.getEmail(),user1.getUserRole()));
     }
 
     @PostMapping("/signup")
